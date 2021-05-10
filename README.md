@@ -5,3 +5,7 @@ Output is in CSV columnar format and can be processed by Gnuplot.
 ## Usage
 * Compile and install Quark and Spongent libraries
 * Run scripts/benchmark.sh
+
+## Requirements
+* GNU Time
+* CLANG/gcc
