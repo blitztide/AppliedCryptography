@@ -9,3 +9,7 @@ Output is in CSV columnar format and can be processed by Gnuplot.
 ## Requirements
 * GNU Time
 * CLANG/gcc
+
+## References
+* **Spongent** https://asecuritysite.com/encryption/spongent
+* **Quark** https://github.com/veorq/Quark
