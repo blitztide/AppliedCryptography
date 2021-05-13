@@ -4,9 +4,10 @@
 # Global Variables   #
 ######################
 Start=1
-End=5		#Number of Iterations
+End=1000		#Number of Iterations
 TimeFilename="../data/$(date +%y%m%d%H%M-TimeData-$End.csv)"
 MemoryFilename="../data/$(date +%y%m%d%H%M-Memory-Data-$End.csv)"
+BinaryFilename="../data/$(date +%y%m%d%H%M-Binary-Size.csv)"
 Header="Sizes "
 TestData=("16bytes" "32bytes" "64bytes" "128bytes" "256bytes" "512bytes" "1024bytes" "2048bytes" "4096bytes")
 Hashes=( "uquark" "cquark" "squark" "dquark" "spongent-88" "spongent-128" "spongent-160" "spongent-224" "spongent-256")
@@ -44,12 +45,11 @@ do
 	echo $TestResults | tee -a $TimeFilename
 done
 
-echo -e "\e[32m(*)\e[0m Starting Memory Test"
-
-
 ######################
 # Memory Testing     #
 ######################
+
+echo -e "\e[32m(*)\e[0m Starting Memory Test"
 
 #Creating a temp file to store memory sizes
 echo $Header | tee $MemoryFilename
@@ -75,3 +75,17 @@ do
 	done
 	echo $TestResults | tee -a $MemoryFilename
 done
+
+######################
+# Binary Size Testing#
+######################
+
+echo -e "\e[32m(*)\e[0m Starting Binary Test"
+
+echo $Header | tee $BinaryFilename
+Output="Size "
+for Hash in ${Hashes[@]}
+do
+	Output+="$(stat -c %s $(which $Hash)) "
+done
+echo $Output | tee $BinaryFilename
