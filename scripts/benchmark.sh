@@ -57,12 +57,12 @@ for Test in ${TestData[@]}
 do
 	Bytes=$(echo $Test | sed "s/bytes//g")
 	TestResults="${Bytes} "
-	Total=0
 	for Hash in ${Hashes[@]}
 	do
+		Total=0
 		for (( c=$Start; c<$End; c++ ))
 		do
-			TestVal=$(/usr/bin/time -f %M md5sum /etc/passwd 2>>tmp.sum)
+			TestVal=$(/usr/bin/time -f %M $Hash ../testdata/$Test  2>>tmp.sum)
 		done
 		
 		for Value in $(cat tmp.sum)

@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS= -Wall -O3 -I$(INC_DIR) 
+CFLAGS= -Wall -O2 -I$(INC_DIR) 
 BIN= spongent-88 spongent-128 spongent-160 spongent-224 spongent-256
 DEBUG= -DDEBUG
 BUILDDIR=bin

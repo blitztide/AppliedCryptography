@@ -1,5 +1,5 @@
 CC=clang
-CFLAGS= -Wall -O3 
+CFLAGS= -Wall -O2 
 BIN= uquark dquark squark cquark
 DEBUG= -DDEBUG
 BUILDDIR=bin
