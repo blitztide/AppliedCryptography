@@ -10,6 +10,23 @@ Output is in CSV columnar format and can be processed by Gnuplot.
 * GNU Time
 * CLANG/gcc
 
+## Compiling
+![Compilation](https://github.com/blitztide/AppliedCryptography/raw/main/Images/Compiling.png "Compiling Hash functions")
+
+## Running the Benchmark
+
+![Benchmarking](https://github.com/blitztide/AppliedCryptography/raw/main/Images/Benchmark.png "Benchmarking Hash Functions")
+
+## Results
+### Performance
+
+| Quark | Spongent |
+|-------|----------|
+|![Quark Results](https://github.com/blitztide/AppliedCryptography/raw/main/Images/Time-Quark.png)|![Spongent Results](https://github.com/blitztide/AppliedCryptography/raw/main/Images/Time-Spongent.png)|
+
+### Memory
+![Memory Overview](https://github.com/blitztide/AppliedCryptography/raw/main/Images/Memory-Full.png)
+
 ## References
 * **Spongent** https://asecuritysite.com/encryption/spongent
 * **Quark** https://github.com/veorq/Quark
